@@ -104,6 +104,8 @@ class FormulaOneCar : VehicleDecorator {
     
 }
 
+//MARK: USAGE OF DECORATOR PATTERN
+
 let car = Car()
 let nascarCar = NascarCar(vehicle: car)
 let formulaOneCar = FormulaOneCar(vehicle: car)

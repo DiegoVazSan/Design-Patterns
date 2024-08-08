@@ -4,6 +4,7 @@
         <page name='Decorator'/>
         <page name='Strategy'/>
         <page name='Adapter'/>
+        <page name='Observer'/>
         <page name='SpecialCasePattern'/>
     </pages>
 </playground>

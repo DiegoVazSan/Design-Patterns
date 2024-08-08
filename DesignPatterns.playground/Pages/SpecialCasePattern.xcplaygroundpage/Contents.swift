@@ -40,7 +40,7 @@ class EmailNotificationWithAttachment: EmailNotification {
     }
 }
 
-//MARK: USAGE
+//MARK: USAGE OF SPECIAL CASE PATTERN
 
 func processNotification(_ notification: Notification) {
     notification.send()

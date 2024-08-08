@@ -44,7 +44,7 @@ class PaymentAdapter: NewPaymentSystem {
 
 
 
-//MARK: USAGE
+//MARK: USAGE OF ADAPTER PATTERN
 
 /// Old System
 let oldSystem = SDKPaymentSystem()
