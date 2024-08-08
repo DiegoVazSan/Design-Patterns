@@ -6,5 +6,6 @@
         <page name='Adapter'/>
         <page name='Observer'/>
         <page name='SpecialCasePattern'/>
+        <page name='DependencyInjection'/>
     </pages>
 </playground>
