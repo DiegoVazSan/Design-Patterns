@@ -4,5 +4,6 @@
         <page name='Decorator'/>
         <page name='Strategy'/>
         <page name='Adapter'/>
+        <page name='SpecialCasePattern'/>
     </pages>
 </playground>
