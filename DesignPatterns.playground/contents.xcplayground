@@ -7,5 +7,6 @@
         <page name='Observer'/>
         <page name='SpecialCasePattern'/>
         <page name='DependencyInjection'/>
+        <page name='Singelton'/>
     </pages>
 </playground>
