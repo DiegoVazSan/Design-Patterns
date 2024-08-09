@@ -8,5 +8,7 @@
         <page name='SpecialCasePattern'/>
         <page name='DependencyInjection'/>
         <page name='Singelton'/>
+        <page name='Factory'/>
+        <page name='Command'/>
     </pages>
 </playground>
