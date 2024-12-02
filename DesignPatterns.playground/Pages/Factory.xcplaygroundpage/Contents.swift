@@ -1,53 +1,70 @@
+
+//MARK: CREATIONAL
 //MARK: Factory
 
 /*
  This provides an interface for creating objects in a base class, but allows subclasses to alter the type of objects that are created. It is useful when the object creation process is complex or needs to be flexible.
  */
 
-//MARK: Define a protocol that all concrete classes must implememnt
+//MARK: - PROTOCOL
+///All concrete classes must implememnt
 
-protocol Vehicle {
-    func drive()
+protocol Payment {
+    func executePayment()
 }
 
-//MARK: Concrete Clasess that implement vehicle interface
+enum TypePayment {
+    case google
+    case paypal
+    case applePay
+}
 
-class Car: Vehicle {
-    func drive() {
-        print("Driving a car")
+//MARK: - CONCRETE CLASSES
+/// Implement Payment interface
+
+class GooglePayment: Payment {
+    func executePayment() {
+        print("Execute Payment With Google")
     }
 }
 
-class Bike: Vehicle {
-    func drive() {
-        print("Riding a bike")
+class PayPalPayment: Payment {
+    func executePayment() {
+        print("Execute Payment With PayPal")
     }
 }
 
-//MARK: Factory Class provides a method for creating vehicles.
+class ApplePayPayment: Payment {
+    func executePayment() {
+        print("Execute Payment With Apple Pay")
+    }
+}
 
-class VehicleFactory {
-    /// Factory Method that return an Vehicle Object
-    func createVehicle(type: String) -> Vehicle? {
+
+//MARK: - FACTORY
+///Class provides a method for creating vehicles.
+
+class PaymentFactory {
+    
+    static func buildPayment(type: TypePayment) -> Payment {
         switch type {
-        case "Car":
-            return Car()
-        case "Bike":
-            return Bike()
-        default:
-            return nil
+        case .google:
+            return GooglePayment()
+            
+        case .paypal:
+            return PayPalPayment()
+            
+        case .applePay:
+            return ApplePayPayment()
         }
     }
 }
 
-//MARK: Client Code
-let factory = VehicleFactory()
+//MARK: - CLIENT CODE
 
-if let myCar = factory.createVehicle(type: "Car") {
-    myCar.drive()  // Output: Driving a car
-}
+var payment :  Payment
+payment = PaymentFactory.buildPayment(type: .google)
+payment.executePayment()
 
-if let myBike = factory.createVehicle(type: "Bike") {
-    myBike.drive()  // Output: Riding a bike
-}
-
+payment = PaymentFactory.buildPayment(type: .applePay)
+payment.executePayment()
