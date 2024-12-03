@@ -10,5 +10,6 @@
         <page name='Singelton'/>
         <page name='Factory'/>
         <page name='Command'/>
+        <page name='AbstractFactory'/>
     </pages>
 </playground>
