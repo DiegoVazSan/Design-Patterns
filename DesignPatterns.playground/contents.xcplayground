@@ -11,5 +11,7 @@
         <page name='Factory'/>
         <page name='Command'/>
         <page name='AbstractFactory'/>
+        <page name='Builder'/>
+        <page name='Prototype'/>
     </pages>
 </playground>
